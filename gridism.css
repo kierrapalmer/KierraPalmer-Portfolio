@@ -1,0 +1,96 @@
+.grid, .unit{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.grid{
+    display: block;
+    clear: both;
+}
+
+.grid .unit{
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.grid .unit:first-child{
+    padding-left: 20px;
+}
+.grid .unit:last_child{
+    padding-right: 20px;
+}
+.unit .grid:first-child > .unit{  /**selects the first child unit of the first grid child of a unit*/
+  padding-top:0;                         
+    
+}
+
+.unit .grid:last-child > .unit{  /*selects the first child unit of the last grid child of a unit*/
+  padding-bottom:0;                       
+    
+}
+.grid .one-third{
+    width: 33.332%;
+}
+.grid .one-fifth{
+    width: 20%;
+}
+.grid .one-quarter{
+    width: 25%;
+}
+.grid .three-quarters{
+    width: 75%;
+}
+.wrap .grid,
+.grid.wrap{
+    max-width: 978px;
+    margin: 0 auto;
+}
+
+.grid .whole{
+    width: 100%;
+}
+
+.grid .half{
+    width: 50%;
+}
+
+.grid .golden-small{
+    width: 38.2716%;
+}
+
+.grid .golden-large{
+    width: 61.7283%;
+}
+
+.grid:before, .grid:after{      /*sets up the element*/
+    display: table;             /*zeroing out the floats*/
+    content: "";
+    line-height: 0;
+}
+
+.grid:after{
+    clear:both;             /*clears above element*/
+}
+
+@media screen and (max-width: 600px){   /*anything smaller than 568px will stack the grids*/ 
+    .grid .unit{
+        width: 100% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 850px){     /*changes the width that portfolio images get stacked*/
+    .grid .portfolio{
+        width: 50% !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (min-width: 1180px){
+    .wider .grid{
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}

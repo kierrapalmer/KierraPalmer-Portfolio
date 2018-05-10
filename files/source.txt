@@ -1,0 +1,17 @@
+Photo Sources
+
+White Background
+Author: SkaHero42
+Link:https://pixabay.com/p-1556107/?no_redirect
+
+Homepage:
+Senior Photo
+Land: Photo by Rucksack Magazine on Unsplash
+
+Water: Photo by Nathan Anderson on Unsplash
+
+Portfolio:
+
+Filter hover effects CSS code:
+Author: Amelia Bellamy-Royds
+Link: https://css-tricks.com/color-filters-can-turn-your-gray-skies-blue/

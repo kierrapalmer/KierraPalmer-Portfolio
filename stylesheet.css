@@ -1,0 +1,301 @@
+/*
+Main stylesheet
+Author: Kierra Palmer
+Date: 12 September 2017
+*/
+
+@font-face {
+    font-family: myFont;
+    src: url(carbon.ttf);
+}
+
+body{
+	background-image: url(images/back.png);
+}
+ .navbar-transparent {
+	color:black;
+	font-weight: bold;
+	z-index: 2;
+    /*background: url(images/nav.jpg);*/
+} 
+ .navbar-transparent a {
+	color:white !important;				/*changes color of link text*/
+}
+.navbar-transparent a:hover{
+		color: black !important;		/*changes color of link text on hover*/
+	
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: right;
+    }
+}
+ 
+.main{
+	color: #000049;
+	font-family: Helvetica, Arial, Courier, sans-serif;
+}
+
+.main  h1, .main  h2, .main h3 {
+	font-family: myFont, Helvetica, Courier, Serif;
+}
+.main a{
+	color: red;
+}
+hr {
+    border: none;
+    height: 4px;
+	background-color: grey;
+}
+main img{
+	margin: 2px;
+}
+footer{
+	background: url(images/nav.jpg) navy;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	position: fixed;
+	bottom: 0px;
+
+}
+.topPic{
+	width: 100%;
+	position:relative;
+	top: -90px;
+	z-index:-1;
+}
+.topPicText{
+	font-family: "arial black";
+	color: white;
+	font-size:  7.5vmax;
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	z-index:3;
+}
+/*Home*/
+/* #laptop{
+	width: 100%;
+	position:relative;
+	top: -90px;
+} */
+/*.overlay {
+   background: rgba(70, 72, 82, 0.5);
+   z-index: 2;
+   height: 825px;
+} */
+
+#logo{
+	font-family: "arial";
+	font-weight: bold;
+	color: white;
+	font-size:  40.0vmax;
+	text-align: center;
+	position: relative;
+	top: -1000px;
+	left: 50px;
+	z-index:3;
+}
+#desc{
+	color:white;
+	font-size: 3vmax;
+	text-align: center;
+	position: relative;
+	top: -1100px;
+	left: 50px;
+	z-index:3;
+}
+
+
+#welcome{
+	font-size: 20px;
+	text-align: left;
+	position: relative;
+	top: -800px;
+    float: left;
+}
+#senior{
+	width: 95%;
+	padding: 10px 30px 10px 30px;
+    float: right;
+}
+#intro{
+    width: 80%;
+	padding: 20px 30px;
+	font-size: 1.5vmax;
+}
+#welc{
+	padding: 30px 45px 0px 45px;
+
+	font-weight:bold;
+	font-size: 4vmax;
+}
+#aboutme{
+	padding: 20px 40px 20px 40px;
+	background-color: #e1e0e0;
+	width:100%;
+}
+.em{
+	color:#000049;
+	font-weight: bold;
+}
+#welcome a{
+	color: #000049;
+	font-weight: bold;
+}
+#map{
+	position:relative;
+	top:-10px;
+}
+.floatL{
+	float: left;
+}
+.floatR{
+	float:right;
+}
+#meeting{
+	clip: rect(50px,310px,310px,30px)
+	
+}
+
+
+
+/*portfolio*/
+#portfolio{
+	padding-left: 10px;
+	margin-bottom: 100px;
+}
+#quote{
+	background: #031d37;
+	padding: 60px 120px ;
+	text-align: center;
+	font-size: 40px;
+	position: relative;
+	top: -110px;
+	border:1px solid black;
+	color: white;
+}
+#port{
+	position: absolute;
+	left: 5px;
+}
+.portPic{
+	position: absolute;
+	clip: rect(50px,310px,310px,30px)
+} /*trbl*/
+
+.row2{
+	top:250px;
+}.row3{
+	top: 500px;
+}.row4{
+	top: 850px;
+}.row5{
+	top: 1100px;
+}.row6{
+	top: 1350px;
+}.row7{
+	top: 1700px;
+}.row8{
+	top: 1950px;
+}.row9{
+	top: 2200px;
+}
+/* following written in reference to Amelia Bellamy-Royds' 
+	article at https://css-tricks.com/color-filters-can-turn-your-gray-skies-blue/*/
+
+.portPic {
+  box-shadow: #222 0.2em 0.2em 1em;
+  border: 8px solid rgb(100,100,100);
+  
+ -webkit-filter: grayscale(60%) 
+          brightness(105%)
+          contrast(100%);
+  filter: grayscale(60%) 
+          brightness(105%)
+          contrast(100%);
+  
+  transition: filter 0.3s, box-shadow 0.3s;
+  -webkit-transition: filter 0.3s, -webkit-filter 0.3s, box-shadow 0.3s; 
+}
+
+.link:hover .portPic, 
+.link:focus .portPic {
+  -webkit-filter: none;
+  filter: none;
+  box-shadow: #224 0.2em 0.2em 0.6em 0.1em;
+  border: 8px solid black;
+}
+.link {
+  display: inline;
+  padding: 1em;
+}
+
+/*end of Bellamy-Royds' code*/
+
+
+
+.text{
+	color: #031d37;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+#title2{
+	position: absolute;
+	top: 900px;
+}
+#title3{
+	position: absolute;
+	top: 1820px;
+}
+
+
+
+
+
+/*education*/
+#school{
+	position:absolute;
+	left: 40px;
+	width: 50%;
+}
+
+#boise{
+	float: right;
+
+}
+
+.work{
+	background-color: pink;
+}
+
+.cs{
+	background-color: powderblue;
+}
+
+.mentor{
+	background-color: lightsalmon;
+}
+
+.physic{
+	background-color: palegreen;
+}
+
+
+#schedule{
+	margin:5px;
+	width:95%;
+}
+
+
