@@ -65,6 +65,11 @@ main{
     color: white;
 }
 
+.bar li a{
+    color: white;
+
+}
+
 
 .topPic{
 background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c1fd511e8084af7e3c53226f4a54cbbf&auto=format&fit=crop&w=1350&q=80");
@@ -96,9 +101,10 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     padding: 30px;
 }
 
-.empa, a, a:hover{
+.text-accent, .about a, .about a:hover{
     color: var(--accent);
 }
+
 
 
 
@@ -106,7 +112,7 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
         Portfolio 
 ------------------------------------*/
 .portfolio{
-    
+    margin-left: 15px;
 }
 .portItem{
     max-width: 500px;
@@ -114,14 +120,27 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     align-items: center;
     justify-content: center;
 }
-.portItem .btn{
+.portItem .btn-accent{
     background-color:transparent;
-    color: var(--accent);
+    color: var(--accent) !important;
     border: 1px solid var(--accent);
+    padding: 8px;
 }
-.portItem .btn:hover{
+.portItem .btn-accent:hover{
     background-color: var(--accent);
+    color: white !important;
+     text-decoration: none;
+}
+.portItem .btn-white{
+    background-color:transparent;
     color: white;
+    border: 1px solid white;
+    padding: 8px;
+}
+.portItem .btn-white:hover{
+    background-color: white;
+    color: var(--accent) !important;
+    text-decoration: none;
 }
 
 .portItem ul{
@@ -138,6 +157,12 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     color: var(--off-white) !important;
 }
 
+/*--------------------------------------       
+        Experience
+------------------------------------------*/
+.exp-row .right{
+    border-left: 1px solid lightgrey;
+}
 
 
 /*--------------------------------------
