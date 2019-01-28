@@ -20,7 +20,6 @@ body{
 main{
     position: absolute;
     left: 30px;
-    padding: 10px;
     color: white;
     height: 100%;
 }
@@ -30,8 +29,32 @@ main{
     border-bottom: white 1px solid;
     height: 10px;
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
+
+.btn-accent{
+    background-color:transparent;
+    color: var(--accent) !important;
+    border: 1px solid var(--accent);
+    padding: 8px;
+}
+.btn-accent:hover{
+    background-color: var(--accent);
+    color: white !important;
+     text-decoration: none;
+}
+.btn-white{
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px;
+}
+.btn-white:hover{
+    background-color: white;
+    color: var(--accent) !important;
+    text-decoration: none;
+}
+
 
 
 /* ----------------------------------
@@ -56,20 +79,29 @@ main{
   transform: rotate(90deg);
   transform-origin:  bottom left;
   background-color:rgba(29,29,28, .4) ;
-  border-top: 1px solid white;
 }
 
 .bar li{
     display: inline-block;
-    margin: 0 1em;
     color: white;
+    border-top: 1px solid white;
+    width: 100%;
+
 }
 
 .bar li a{
     color: white;
+    text-decoration: none;
+
+    
+}
+.highlight{
+    border-top: 1px solid var(--accent) !important;
+}
+.highlight a{
+        color: var(--accent) !important;
 
 }
-
 
 .topPic{
 background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c1fd511e8084af7e3c53226f4a54cbbf&auto=format&fit=crop&w=1350&q=80");
@@ -113,6 +145,7 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
 ------------------------------------*/
 .portfolio{
     margin-left: 15px;
+    padding: 20px;
 }
 .portItem{
     max-width: 500px;
@@ -120,28 +153,7 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     align-items: center;
     justify-content: center;
 }
-.portItem .btn-accent{
-    background-color:transparent;
-    color: var(--accent) !important;
-    border: 1px solid var(--accent);
-    padding: 8px;
-}
-.portItem .btn-accent:hover{
-    background-color: var(--accent);
-    color: white !important;
-     text-decoration: none;
-}
-.portItem .btn-white{
-    background-color:transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px;
-}
-.portItem .btn-white:hover{
-    background-color: white;
-    color: var(--accent) !important;
-    text-decoration: none;
-}
+
 
 .portItem ul{
     list-style-type: none;
@@ -168,16 +180,16 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
 /*--------------------------------------
         Contact Me
 ------------------------------------------*/
-.contactSect{
+.contact{
      background-attachment: fixed;
-     color: var(--dark-grey);
+     color: white;
      display: flex;
      flex-direction: row;
      justify-content: center;
-     padding: 100px 0px;
+     padding: 20px 0px;
 }
 
-.contactSect h3{
+.contact h3{
     color: var(--white);
     font-weight: bold;
 }
@@ -190,32 +202,31 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     margin-left: 5%;
     width: 60%;
 }
-
-.contactSect input{
-    width: 25%;
+.contact a, .contact a:hover{
+    color: white;
+}
+.contact input{
+    width: 100%;
     border-radius: 7px;
     margin-right: 10px;
     margin-bottom: 10px;
     color: grey;
-    padding: 2px 0;
+    padding: 2px 5px;
 }
-.contactSect textarea{
+.contact textarea{
     width: 100%;
     border-radius: 7px;
     color: grey;
+    padding: 2px 5px;
+
 }
 #submit{
     position: relative;
-    left: 75%;
+    left: 85%;
     margin-top: 5px;
-    background-color: transparent;
-    color: var(--accent);
-    border-color: var(--accent);
+   width: 15%;
 }
-#submit:hover{
-    background-color: var(--accent);
-    color:white;
-}
+
 /*--contact info--*/
 .contInfo{
     margin-left: 30px;
@@ -229,6 +240,9 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
 }
 .imgSocial:hover .hoverSocial{
     display: inline;
+}
+.imgSocial a:hover{
+    text-decoration: none !important;
 }
 .hoverSocial{
     display: none;
@@ -265,7 +279,9 @@ footer{
 	color: white;
 	text-align: center;
 	width: 100%;
-	height: 50px;
+	height: 30px;
+    
+    
 	
 
 
