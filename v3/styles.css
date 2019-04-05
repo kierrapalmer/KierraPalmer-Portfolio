@@ -226,11 +226,12 @@ background: url("https://images.unsplash.com/photo-1525968902-070804c406e0?ixlib
     margin-top: 5px;
    width: 15%;
 }
+.contact .row{
+width: 95% !important;
+}
 
 /*--contact info--*/
-.contInfo{
-    margin-left: 30px;
-}
+
 .imgSocial img{
   width: 50px;
 }

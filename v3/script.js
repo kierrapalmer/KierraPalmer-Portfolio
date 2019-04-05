@@ -9,7 +9,7 @@ $(document).ready(function () {
             $(".bar").css("background-color", backgroundColor);
 
         //About Section
-        if (scroll > 200 && scroll < 700) {
+        if (scroll > 200 && scroll < 900) {
             $(".barAbout").addClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").removeClass("highlight");
@@ -19,21 +19,21 @@ $(document).ready(function () {
             
         } 
         //Porfolio sections
-        else if (scroll > 700 && scroll < 1900) {
+        else if (scroll > 900 && scroll < 2300) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").addClass("highlight");
             $(".barExperience").removeClass("highlight");
             $(".barContact").removeClass("highlight");
         } 
         //Experience sections
-        else if (scroll > 2000 && scroll < 2800) {
+        else if (scroll > 2800 && scroll < 3200) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").addClass("highlight");
             $(".barContact").removeClass("highlight");
         } 
         //Contact sections
-        else if (scroll > 2000) {
+        else if (scroll > 3200) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").removeClass("highlight");
