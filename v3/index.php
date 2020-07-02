@@ -10,7 +10,7 @@
 	Version: 3
 	Created May 1, 2018
 	-->
-	<?php include('../api_key.php') ?>
+	<?php include('../api.php') ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="Kierra Palmer personal portfolio" />
@@ -89,13 +89,13 @@
 				"btn1" => ["link"=>"https://marketingepic.com", 'text'=>"View Site", "color"=>"white"],
 				"btn2"=> null
 			],
-			[	//Crowdstorage
-				"img" => "assets/images/mockups/deli-mockups.png",
-				"title" => "CrowdStorage - A SaS Company",
-				"description" =>"Building a new site ground up to support and market a developing technology.",
-				"btn1" => ["link"=>"http://crowdstorage.com/", 'text'=>"View Site", "color"=>"white"],
-				"btn2"=> null
-			],
+			// [	//Crowdstorage
+			// 	"img" => "assets/images/mockups/deli-mockups.png",
+			// 	"title" => "CrowdStorage - A SaS Company",
+			// 	"description" =>"Building a new site ground up to support and market a developing technology.",
+			// 	"btn1" => ["link"=>"http://crowdstorage.com/", 'text'=>"View Site", "color"=>"white"],
+			// 	"btn2"=> null
+			// ],
 			[	//Sundridge HOA
 				"img" => "assets/images/mockups/SunridgeHOA.png",
 				"title" => "Sundridge HOA - Property Management",
@@ -115,7 +115,7 @@
 				"title" => "Gem - A Community Selling App",
 				"description" =>"Gem is an app focused on creating an effectiate way for community members to post and buy new and used items.",
 				"btn1" => ["link"=>"https://github.com/kierrapalmer/gem", 'text'=>"View Source", "color"=>"accent"],
-				"btn2" => ["link"=>"https://youtu.be/6DN4TyhIZBg", 'text'=>"View Site", "color"=>"white"],
+				"btn2" => ["link"=>"https://youtu.be/6DN4TyhIZBg", 'text'=>"View Demo", "color"=>"white"],
 			],
 			
 		]?>	
