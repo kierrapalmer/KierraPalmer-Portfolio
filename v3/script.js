@@ -2,45 +2,51 @@ $(document).ready(function () {
     var backgroundColor = $(".bar").css("background-color");
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll > 500)
-            $(".bar").css("background-color", "#333");
+        
 
+        var aboutSection = $('.about').get(0).getBoundingClientRect();
+        var portfolioSection = $('.portfolio').get(0).getBoundingClientRect();
+        var experienceSection = $('.experience').get(0).getBoundingClientRect();
+        var contactSection = $('.contact').get(0).getBoundingClientRect();
+        var offset = 200;
+
+        if (aboutSection.top - offset < 0)
+            $(".bar").css("background-color", "#333");        
         else
             $(".bar").css("background-color", backgroundColor);
-
+            
         //About Section
-        if (scroll > 200 && scroll < 900) {
+        if (aboutSection.top - offset < 0 && aboutSection.bottom - offset > 0 ) {
             $(".barAbout").addClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").removeClass("highlight");
-            $(".barContact").removeClass("highlight");
-            
-            
-            
+            $(".barContact").removeClass("highlight");                      
         } 
         //Porfolio sections
-        else if (scroll > 900 && scroll < 2300) {
+        else if (portfolioSection.top - offset - 90 < 0 && portfolioSection.bottom - offset > 0 ) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").addClass("highlight");
             $(".barExperience").removeClass("highlight");
             $(".barContact").removeClass("highlight");
         } 
         //Experience sections
-        else if (scroll > 2800 && scroll < 3200) {
+        else if (experienceSection.top - offset - 90 < 0 && experienceSection.bottom - offset > 0 ) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").addClass("highlight");
             $(".barContact").removeClass("highlight");
         } 
         //Contact sections
-        else if (scroll > 3200) {
+        else if (contactSection.top - offset - 90 < 0 && contactSection.bottom - offset > 0 ) {
             $(".barAbout").removeClass("highlight");
             $(".barPortfolio").removeClass("highlight");
             $(".barExperience").removeClass("highlight");
             $(".barContact").addClass("highlight");
         } 
-        else
+        else{
             $(".barItem").css("color", "white");
+            $(".barItem").removeClass("highlight"); 
+        }
     })
 })
 

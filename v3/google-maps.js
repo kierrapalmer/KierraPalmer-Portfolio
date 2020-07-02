@@ -1,4 +1,30 @@
-console.log('test');
+var map;
+$(document).ready(function () {
+
+$('a.address').on('click', function(e){
+    e.preventDefault();
+    if(map!=null){
+        center_map(map, 12);
+    }
+});
+});
+function init_map(){
+
+      infowindow = new google.maps.InfoWindow();// create info window
+      // // create map
+      if($('#google-map').length > 0){
+          map = new_map( $('#google-map') );
+      }
+      // maps.push(map);
+
+  //  for(var i = 0; i < maps.length; i++){
+      google.maps.event.addListenerOnce(map, 'idle', function(){
+        document.getElementsByTagName('iframe')[0].title = "Google Map for Personal Portfolio Locations";
+      });
+  //  }
+
+}
+
 function new_map( $el ) {
 
   // var
@@ -10,11 +36,16 @@ function new_map( $el ) {
     zoom    : 16,
     center    : new google.maps.LatLng(0,0),
     mapTypeId   : google.maps.MapTypeId.ROADMAP,
-    styles: [ { "featureType": "all", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "administrative", "elementType": "all", "stylers": [ { "visibility": "simplified" } ] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "visibility": "on" } ] }, { "featureType": "landscape", "elementType": "all", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#fcfcfc" } ] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "saturation": "-100" }, { "visibility": "on" } ] }, { "featureType": "landscape", "elementType": "labels", "stylers": [ { "saturation": "-32" } ] }, { "featureType": "landscape.man_made", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape.natural", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape.natural", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "landscape.natural.terrain", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#fcfcfc" } ] }, { "featureType": "poi", "elementType": "labels.icon", "stylers": [ { "visibility": "off" }, { "saturation": "-100" }, { "lightness": "100" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "lightness": "-100" } ] }, { "featureType": "road.highway", "elementType": "labels.icon", "stylers": [ { "visibility": "off" }, { "saturation": "-100" } ] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [ { "lightness": "-100" } ] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#eeeeee" } ] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [ { "lightness": "18" } ] }, { "featureType": "transit", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] } ]
-
+    streetViewControl : false,
+    mapTypeControl : false,
+    fullscreenControl : false,
+    styles: 
+// [{"elementType":"geometry","stylers":[{"color":"#f57000"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"color":"#1d1d1c"}]},{"featureType":"administrative.province","stylers":[{"color":"#1d1d1c"},{"weight":0.5}]},{"featureType":"water","stylers":[{"color":"#1d1d1c"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#1d1d1c"}]}]
+[{"elementType":"geometry","stylers":[{"color":"#f57000"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"color":"#1d1d1c"}]},{"featureType":"administrative.province","stylers":[{"color":"#000000"},{"weight":0.5}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"color":"#4f4f4f"},{"weight":0.5}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","stylers":[{"color":"#1d1d1c"},{"weight":0.5}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#1d1d1c"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#1d1d1c"}]}]
+            // styles: [ { "featureType": "all", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "administrative", "elementType": "all", "stylers": [ { "visibility": "simplified" } ] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [ { "visibility": "on" } ] }, { "featureType": "landscape", "elementType": "all", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#fcfcfc" } ] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [ { "saturation": "-100" }, { "visibility": "on" } ] }, { "featureType": "landscape", "elementType": "labels", "stylers": [ { "saturation": "-32" } ] }, { "featureType": "landscape.man_made", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape.natural", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "landscape.natural", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "landscape.natural.terrain", "elementType": "labels", "stylers": [ { "saturation": "-100" } ] }, { "featureType": "poi", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#fcfcfc" } ] }, { "featureType": "poi", "elementType": "labels.icon", "stylers": [ { "visibility": "off" }, { "saturation": "-100" }, { "lightness": "100" } ] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [ { "lightness": "-100" } ] }, { "featureType": "road.highway", "elementType": "labels.icon", "stylers": [ { "visibility": "off" }, { "saturation": "-100" } ] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [ { "lightness": "-100" } ] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#eeeeee" } ] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [ { "lightness": "18" } ] }, { "featureType": "transit", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "water", "elementType": "geometry", "stylers": [ { "visibility": "simplified" }, { "color": "#dddddd" } ] } ]
+    // 
 
   };
-
 
   // create map
   var map = new google.maps.Map( $el[0], args);
@@ -145,7 +176,7 @@ function add_marker( $marker, map ) {
 *  @param   map (Google Map object)
 *  @return  n/a
 */
-function center_map( map ) {
+function center_map( map, zoom=null ) {
 //console.log(map);
   // vars
   var bounds = new google.maps.LatLngBounds();
@@ -159,42 +190,31 @@ function center_map( map ) {
 
   });
 
-  // only 1 marker?
-  if( map.markers.length == 1 )
+  // zoom set?
+  if( zoom != null )
   {
     //console.log(' = 1');
     // set center of map
     map.setCenter( bounds.getCenter() );
-    map.setZoom( 16 );
+    map.setZoom( zoom );
   }
-  else if(map.markers.length == 0){//when no address is set, center on UT
+ // else if(map.markers.length == 0){//when no address is set, center on UT
+ else{
     //console.log(' = 0')
     map.setCenter( new google.maps.LatLng(40, -111) );
     map.setZoom( 4 );
   }
-  else
-  {
-    //console.log(' > 1');
-    // fit to bounds
-    map.fitBounds( bounds );
-  }
-s
-}
-
-function init_map(){
-      infowindow = new google.maps.InfoWindow();// create info window
-
-      // // create map
-      map = new_map( $('#google-map') );
-      // maps.push(map);
-
-  //  for(var i = 0; i < maps.length; i++){
-      google.maps.event.addListenerOnce(map, 'idle', function(){
-        document.getElementsByTagName('iframe')[0].title = "Google Map for Personal Portfolio Locations";
-      });
-  //  }
+  // else
+  // {
+  //   //console.log(' > 1');
+  //   // fit to bounds
+  //   map.fitBounds( bounds );
+  // }
 
 }
+
+
+
 
 
 //
@@ -226,5 +246,25 @@ function myResize(){
           maps[i].setZoom( 16 );
       }
   }, 350);
+}
+
+
+
+//Keep track of logged errors and switch maps if a (any) error is logged
+console.defaultError = console.error.bind(console);
+console.errors = [];
+console.error = function(){
+    console.defaultError.apply(console, arguments);
+    console.errors.push(Array.from(arguments));
+    // console.log(console.errors.length);
+    if(console.errors.length > 0){
+        switchMaps();
+    }
+}
+
+function switchMaps(){
+    console.log('ERROR: Custom Google Map could not be loaded. Switching map to default.');
+    $('.free-map').removeClass('hide');
+    $('.custom-map').addClass('hide');
 }
 
