@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 	
-	<link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="v3/assets/css/styles.css" rel="stylesheet" type="text/css" />
 	<script src="script.js"></script>
 	<script src="google-maps.js"></script>
 	
@@ -64,11 +64,11 @@
 				<div class="col-12 col-lg-10 offset-md-1">
 				  <p> Hi, I'm Kierra! I currently work as a <span class="text-accent">Wordpress Developer</span> 
 				  	at <a href="https://marketingepic.com" target="_blank"> Epic Marketing</a>. 
-				  	In 2019, I graduated with my Bachelors Degree from <a href="https://weber.edu" target="_blank"> Weber State University</a> 
-					with a major in <span class="text-accent">Computer Science</span> and minor in <span class="text-accent">Web Technologies</span>. 
+				  	In 2019, I graduated with my Bachelor's Degree from <a href="https://weber.edu" target="_blank"> Weber State University</a> 
+					with a major in <span class="text-accent">Computer Science</span> and a minor in <span class="text-accent">Web Technologies</span>. 
 					 <br />
 					<br />
-					Throughout my years programming I have built up various major skills. My strongest suits are in <span class="text-accent">HTML, Sass, Javascript, PHP, PhpMyAdmin </span> and the most difficult of all, <span class="text-accent"> Cooking. </span> I also have a good base knowledge in <span class="text-accent">Laravel, ASP.NET Core, C#, SQL Server, </span> as well as the art teaching my dog to dance with me. <br />
+					Throughout my years programming, I have built up various major skills. My strongest suits are in <span class="text-accent">HTML, Sass, Javascript, PHP, PhpMyAdmin </span> and the most difficult of all, <span class="text-accent"> Cooking. </span> I also have a good base knowledge in <span class="text-accent">React Native, Laravel, ASP.NET Core, C#, SQL Server, </span> as well as the art of teaching my dog to dance with me. <br />
 					<br />
 					In my work, I strive to design and code engaging, powerful applications that will show the world the <span class="text-accent"> true beauty </span> that technology can pull from human nature. I am a <span class="text-accent">naturally curious</span> person who is on the constant look out for new revenues on how to improve both myself and the work that I produce. </p>
 				</div>
@@ -82,39 +82,71 @@
 		<div class="hr"></div>	
 
 		<?php $portfolio_items = [
+			[	//Frazil
+				"img" => "assets/images/mockups/frazil-right.png",
+				"title" => "Frazil - Nation-wide Retailer",
+				"description" =>"Working to create a modern website that represents a fun lively company with locations all throughout the US.",
+				"skills"	=> ["Anime.JS", "Isotope", "Google Map API", "WordPress", "PHP", "SASS", "JS"],
+				"btn1" => ["link"=>"https://frazil.com/frazil", 'text'=>"View Site", "color"=>"white"],
+				"btn2"=> null
+			],
+			[	//Frazil App
+				"img" => "assets/images/mockups/frazil-app.png",
+				"title" => "Frazil - The App",
+				"description" =>"Creating an interactive app to encourage sales through gamification principles.",
+				"skills"	=> ["React Native", "Android", "iOS", "Expo", "Authentication", "Firebase", "WordPress REST API", "WooCommerce"],
+				"btn1" => ["link"=>"https://play.google.com/store/apps/details?id=com.marketingepic.FrazilApp&hl=en&gl=US", 'text'=>"Download Android", "color"=>"android"],
+				"btn2" => ["link"=>"https://apps.apple.com/us/app/frazil/id1625130045", 'text'=>"Download iOS", "color"=>"ios"],
+			],
+			[	//Selah
+				"img" => "assets/images/mockups/selah-right.png",
+				"title" => "Selah - A Design Portfolio",
+				"description" =>"Building a cutting-edge animated design portfolio that will stand out in the industry.",
+				"skills"	=> ["GSAP", "PixiJS", "Isotope", "WordPress", "PHP", "SASS", "JS"],
+				"btn1" => ["link"=>"https://selahcraftsanddesign.com/", 'text'=>"View Site", "color"=>"white"],
+				"btn2"=> null
+			],
 			[ //epic
 				"img" => "assets/images/mockups/epic-mockup.png",
 				"title" => "Epic Marketing - An Internal Site Creation",
 				"description" =>"Creating a sleek, modern webfront to compete within a bustling marketing agency industry.",
+				"skills"	=> ["HTML5 Canvas", "WordPress", "PHP", "SASS", "JS"],
 				"btn1" => ["link"=>"https://marketingepic.com", 'text'=>"View Site", "color"=>"white"],
 				"btn2"=> null
 			],
-			// [	//Crowdstorage
-			// 	"img" => "assets/images/mockups/deli-mockups.png",
-			// 	"title" => "CrowdStorage - A SaS Company",
-			// 	"description" =>"Building a new site ground up to support and market a developing technology.",
-			// 	"btn1" => ["link"=>"http://crowdstorage.com/", 'text'=>"View Site", "color"=>"white"],
-			// 	"btn2"=> null
-			// ],
-			[	//Sundridge HOA
-				"img" => "assets/images/mockups/SunridgeHOA.png",
-				"title" => "Sundridge HOA - Property Management",
-				"description" =>"A property management web application created for a local Homeowner Association to track things such as lots, keys, billing etc.",
-				"btn1" => ["link"=>"https://github.com/kierrapalmer/HOA-Sundridge", 'text'=>"View Source", "color"=>"accent"],
-				"btn2" => ["link"=>"https://youtu.be/6nEoXTh1zGQ", 'text'=>"View Demo", "color"=>"white"],
+			[	//Lowen
+				"img" => "assets/images/mockups/lowen-right.png",
+				"title" => "Lowen - International Watch Maker",
+				"description" =>"Constructing a polished resprentation of a modern cutting-edge company.",
+				"skills"	=> ["pagePiling.js", "Hammer.js", "Bootstrap", "WordPress", "PHP", "SASS", "JS"],
+				"btn1" => ["link"=>"https://dev.epicsrv.com/lowen/", 'text'=>"View Site", "color"=>"white"],
+				"btn2"=> null
 			],
-			[	//City Deli
-				"img" => "assets/images/mockups/deli-mockups.png",
-				"title" => "City Deli - Restaurant Redesign",
-				"description" =>"A webpage redesign created for an advanced css course to expand knowledge on customizable Bootstrap.",
-				"btn1" => ["link"=>"https://github.com/kierrapalmer/City-Deli", 'text'=>"View Source", "color"=>"accent"],
-				"btn2" => ["link"=>"https://eager-easley-0038b6.netlify.com/index.html", 'text'=>"View Site", "color"=>"white"],
+			[	//VASA
+				"img" => "assets/images/mockups/vasa-mockup-left.png",
+				"title" => "VASA Fitness - Membership E-commerce",
+				"description" =>"Maintaining and enhancing an existing site to drive conversion and sales.",
+				"btn1" => ["link"=>"https://vasafitness.com/", 'text'=>"View Site", "color"=>"white"],
+				"skills"	=> ["REST API", "Google Map API", "PWA", "IP Sniff", "WordPress", "PHP", "SASS", "JS"],
+				"btn2"=> null
 			],
+			
+			
+			[	//JPs
+				"img" => "assets/images/mockups/jps-left.png",
+				"title" => "JP's Collision & RV Repair - A Local Business Build",
+				"description" =>"Altering a WordPress template to fit an exisiting brand while maintaining a small budget.",
+				"btn1" => ["link"=>"https://jpsrepair.com/", 'text'=>"View Site", "color"=>"white"],
+				"skills"	=> ["Web Design", "Content Writing", "RevSlider", "Isotope", "WordPress", "Child Theme"],
+				"btn2"=> null
+			],
+			
 			[	//GEM
 				"img" => "assets/images/mockups/GEM-mockup.png",
 				"title" => "Gem - A Community Selling App",
 				"description" =>"Gem is an app focused on creating an effectiate way for community members to post and buy new and used items.",
-				"btn1" => ["link"=>"https://github.com/kierrapalmer/gem", 'text'=>"View Source", "color"=>"accent"],
+				"skills"	=> ["Android",  "Android Activity Lifecycle", "Firebase", "Java", "XML" ],
+				"btn1" => ["link"=>"https://github.com/kierrapalmer/gem", 'text'=>"View Source", "color"=>"accent-fill"],
 				"btn2" => ["link"=>"https://youtu.be/6DN4TyhIZBg", 'text'=>"View Demo", "color"=>"white"],
 			],
 			
@@ -124,40 +156,58 @@
 			<?php $portfolio_count = count($portfolio_items) ?>
 			<?php foreach($portfolio_items as $key=>$portfolio): ?>
 				<?php $img_order = $key % 2 == 0 ? 'order-md-1' : 'order-md-2';
-				$details_order = $key % 2 == 0 ? 'order-md-2' : 'order-md-1' ?>
-				<div class="row">
-					<!-- City Deli -->
-					<div class="col-12 col-lg-5 order-2 <?php echo $details_order ?> d-flex justify-center align-items-center">
+				$details_order = $key % 2 == 0 ? 'order-md-2' : 'order-md-1';
+				$side_class = $key % 2 == 0 ? 'image-left' : 'image-right';
+				$skills = $portfolio['skills'] ?? [] ?>
+				<div class="row <?php echo $side_class ?>">
+					<div class="col-12 col-lg-6 order-2 <?php echo $details_order ?> d-flex justify-center align-items-center">
 						  <div class="port-item-details">
 							<h2 class="work-title"><?php echo $portfolio['title'] ?></h2>
 							<p class="work-description"><?php echo $portfolio['description'] ?></p>
-							<div class="btn-wrap">
-								<?php if(!empty($portfolio['btn1'])): ?>
+							<div class="skills">
+								<?php foreach($skills as $skill):  ?>
+									<div class="skill"><?php echo $skill ?></div>
+								<?php endforeach; ?>
+							</div>
+							
+							<?php if(!empty($portfolio['btn1'])): ?>
+								<?php if( $portfolio['btn1']['color'] == 'android'): ?>
+									<a class="app-store-btn" href="<?php echo $portfolio['btn1']['link'] ?>">
+										<img src="assets/images/android-store.png" alt="play store">
+									</a>
+								<?php else: ?>
+								<div class="btn-wrap">
 									<a href="<?php echo $portfolio['btn1']['link'] ?>" class="btn-<?php echo $portfolio['btn1']['color'] ?>" target="_blank">
 										<?php echo $portfolio['btn1']['text'] ?>
-									</a>
+									</a>									
+								</div>
 								<?php endif; ?>
-							</div>
-							<div class="btn-wrap">
-								<?php if(!empty($portfolio['btn2'])): ?>
+							<?php endif; ?>
+							
+							<?php if(!empty($portfolio['btn2'])): ?>
+								<?php if( $portfolio['btn2']['color'] == 'ios'): ?>
+									<a class="app-store-btn" href="<?php echo $portfolio['btn2']['link'] ?>">
+										<img src="assets/images/ios-store.png" alt="ios store">
+									</a>
+								<?php else: ?>
+									
+								<div class="btn-wrap">									
 									<a href="<?php echo $portfolio['btn2']['link'] ?>" class="btn-<?php echo $portfolio['btn2']['color'] ?>" target="_blank">
 										<?php echo $portfolio['btn2']['text'] ?>
 									</a>
+								</div>
 								<?php endif; ?>
-								
-							</div>
+							<?php endif; ?>
 						</div>
 					</div>
 
-					<div class="col-12 col-lg-7 order-1 <?php echo $img_order ?>"> 
+					<div class="col-12 col-lg-6 order-1 <?php echo $img_order ?>"> 
 						<img class="mockup" src="<?php echo $portfolio['img'] ?>" alt="Deli mockups"> 
 					</div>
 				</div>
 			<?php endforeach; ?>
 		</div>
 	</section>
-   
-		
 	
 	<!-- Work Experience	-->
 	<section class="experience" id="experience">
@@ -173,16 +223,16 @@
 			<div class="row exp-row">
 				<div class="col-md-4 left">
 				  <h4>Epic Marketing</h4>
-				  <p class="text-secondary">May 2019-Present</p>
+				  <p class="text-secondary">May 2019-Current</p>
 				</div>
 				<div class="col-md-8 right">
-				  <h3>Web Developer</h3>
+				  <h3>Full Stack Web Developer</h3>
 				  <p> - Develop custom Wordpress sites from the ground up using HTML, SASS, JQuery, and PHP. <br />
 					- Maintain and troubleshoot existing clients sites.</p>
 				</div>
 			</div>
 
-			<div class="row exp-row">
+			<div class="row exp-row pt-3">
 				<div class="col-md-4 left">
 				  <h4>Weber State University</h4>
 				  <p class="text-secondary">Aug 2017-Apr 2019</p>

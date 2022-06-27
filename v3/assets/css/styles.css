@@ -33,6 +33,7 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: var(--darkGrey); 
   color: var(--white);
+  margin-bottom: 100px;
 }
 
 main {
@@ -74,7 +75,22 @@ h1, h2, h3 {
 .btn-wrap{
     display: inline-block;
     margin-right: 5px;
+
 }
+
+.btn-accent-fill {
+  background-color: var(--accent);
+  color: white !important;
+  border: 1px solid var(--accent);
+  padding: 8px; 
+}
+
+.btn-accent-fill:hover {
+  background-color: transparent;
+  color: var(--accent) !important;
+  text-decoration: none; 
+}
+
 .btn-accent {
   background-color: transparent;
   color: var(--accent) !important;
@@ -216,6 +232,7 @@ h1, h2, h3 {
 .port-item-details{
     margin-bottom: 50px;
 }
+
 .port-item-details .work-title{
     margin-bottom: 20px;
 }
@@ -223,6 +240,28 @@ h1, h2, h3 {
     margin-bottom: 30px;
 }
 
+.app-store-btn img{
+    width: 180px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.skill{
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 5px 10px;
+    margin: 0 2px 5px;
+}
+.skill:hover{
+    background-color: var(--accent);
+    color: white;
+}
 img.mockup{
     margin-bottom: 20px;
 }
@@ -230,6 +269,9 @@ img.mockup{
 @media screen and (min-width: 768px) {
     .portItemDetails{
         margin-bottom: 0;
+    }
+    .image-right .port-item-details{
+        margin-left: 50px;
     }
     img.mockup{
       margin-bottom: 0;

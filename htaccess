@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^localhost/kierrapalmer-portfolio/$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^localhost/kierrapalmer-portfolio$
+RewriteCond %{REQUEST_URI} !v3/
+RewriteRule (.*) /v3/$1 [L]
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+
+
+
+
+
+
+
+
